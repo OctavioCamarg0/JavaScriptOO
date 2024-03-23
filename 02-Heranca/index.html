@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declaração</title>
+    <title>Herança</title>
 </head>
 <body>
     <button id="btnImprimir">Imprimir Forma</button>
 
     <script src="forma.js"></script>
+    <script src="quadrado.js"></script>
+    <script src="triangulo.js"></script>
+    <script src="circulo.js"></script>
+    <script src="retangulo.js"></script>
     <script>
+        // const forma = new Forma();
         const forma = new Quadrado(10);
+        const tri = new Triangulo(4,9);
+        const cir = new Circulo(5);
+        const ret = new Retangulo(8,5);
         document.getElementById('btnImprimir').addEventListener('click', function(){
             forma.imprimeForma();
+            tri.imprimeForma();
+            cir.imprimeForma();
+            ret.imprimeForma();
         })
     </script>
 </body>

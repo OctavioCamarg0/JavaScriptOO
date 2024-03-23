@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declaração</title>
+    <title>Herança</title>
 </head>
 <body>
     <button id="btnImprimir">Imprimir Forma</button>
 
     <script src="forma.js"></script>
+    <script src="quadrado.js"></script>
+    <script src="quadrado-colorido.js"></script>
+    <script src="retangulo.js"></script>
     <script>
-        const forma = new Quadrado(10);
+        // const forma = new Forma();
+        const forma = new QuadradoColorido(20,'azul');
+        const ret = new Retangulo(9, 7)
         document.getElementById('btnImprimir').addEventListener('click', function(){
             forma.imprimeForma();
+            ret.imprimeForma()
         })
     </script>
 </body>
